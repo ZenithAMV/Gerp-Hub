@@ -1,0 +1,95 @@
+-- Objects To Lua Made By HairBaconGamming --
+local Module_Scripts = {}
+local GerpService = Instance.new("Folder")
+local Settings = Instance.new("Configuration")
+local Gerpie = Instance.new("Part")
+local Target = Instance.new("Folder")
+local GerpHighlight = Instance.new("Highlight")
+local GerpGui = Instance.new("BillboardGui")
+local Text = Instance.new("TextLabel")
+local Shadow = Instance.new("TextLabel")
+local Gradiant = Instance.new("UIGradient")
+local Events = Instance.new("Folder")
+local TargetChanged = Instance.new("BindableEvent")
+local SilentToggle = Instance.new("BindableEvent")
+
+-- Properties --
+GerpService.Name = [[GerpService]]
+GerpService.Parent = game[ [[ReplicatedStorage]] ]
+Settings.Name = [[Settings]]
+Settings.Parent = GerpService
+Settings:SetAttribute("X",getgenv().Xaxis) 
+Settings:SetAttribute("TechDistance",getgenv().MaxDistance) 
+Settings:SetAttribute("GerpieLifeTime",getgenv().GerpieLT) 
+Gerpie.Shape = Enum.PartType.Ball
+Gerpie.Anchored = true
+Gerpie.BottomSurface = Enum.SurfaceType.Smooth
+Gerpie.BrickColor = BrickColor.new([[Really red]])
+Gerpie.CanCollide = false
+Gerpie.Color = Color3.new(1.000, 0.000, 0.000)
+Gerpie.Material = Enum.Material.Neon
+Gerpie.Reflectance = 1
+Gerpie.Size = Vector3.new(1.000, 1.000, 1.000)
+Gerpie.TopSurface = Enum.SurfaceType.Smooth
+Gerpie.Transparency = 1
+Gerpie.Name = [[Gerpie]]
+Gerpie.Parent = GerpService
+Target.Name = [[Target]]
+Target.Parent = GerpService
+GerpHighlight.FillColor = Color3.new(0.239, 1.000, 0.184)
+GerpHighlight.OutlineColor = Color3.new(0.035, 0.580, 0.035)
+GerpHighlight.OutlineTransparency = 0.3
+GerpHighlight.Name = [[GerpHighlight]]
+GerpHighlight.Parent = Target
+GerpGui.Active = true
+GerpGui.AlwaysOnTop = true
+GerpGui.ClipsDescendants = true
+GerpGui.LightInfluence = 1
+GerpGui.Size = UDim2.new(5, 0, 1, 0)
+GerpGui.StudsOffsetWorldSpace = Vector3.new(0.000, 1.500, 0.000)
+GerpGui.Name = [[GerpGui]]
+GerpGui.Parent = Target
+Text.FontFace = Font.new("rbxassetid://12187364648", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Text.Text = [[Silent Aim Target]]
+Text.TextColor3 = Color3.new(1.000, 1.000, 1.000)
+Text.TextScaled = true
+Text.TextSize = 14
+Text.TextWrapped = true
+Text.AnchorPoint = Vector2.new(0.500, 0.500)
+Text.BackgroundColor3 = Color3.new(1.000, 1.000, 1.000)
+Text.BackgroundTransparency = 1
+Text.BorderColor3 = Color3.new(0.000, 0.000, 0.000)
+Text.BorderSizePixel = 0
+Text.Position = UDim2.new(0.5, 0, 0.5, 0)
+Text.Size = UDim2.new(1, 0, 1, 0)
+Text.ZIndex = 2
+Text.Name = [[Text]]
+Text.Parent = GerpGui
+Shadow.FontFace = Font.new("rbxassetid://12187364648", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Shadow.Text = [[Silent Aim Target]]
+Shadow.TextColor3 = Color3.new(0.000, 0.000, 0.000)
+Shadow.TextScaled = true
+Shadow.TextSize = 14
+Shadow.TextWrapped = true
+Shadow.AnchorPoint = Vector2.new(0.500, 0.500)
+Shadow.BackgroundColor3 = Color3.new(1.000, 1.000, 1.000)
+Shadow.BackgroundTransparency = 1
+Shadow.BorderColor3 = Color3.new(0.000, 0.000, 0.000)
+Shadow.BorderSizePixel = 0
+Shadow.Position = UDim2.new(0.5, 2, 0.5, 2)
+Shadow.Size = UDim2.new(1, 0, 1, 0)
+Shadow.Name = [[Shadow]]
+Shadow.Parent = Text
+Gradiant.Color = ColorSequence.new({ColorSequenceKeypoint.new(0.000, Color3.new(1.000, 1.000, 1.000)), ColorSequenceKeypoint.new(1.000, Color3.new(0.510, 0.510, 0.510))})
+Gradiant.Rotation = 90
+Gradiant.Name = [[Gradiant]]
+Gradiant.Parent = Text
+Events.Name = [[Events]]
+Events.Parent = GerpService
+TargetChanged.Name = [[TargetChanged]]
+TargetChanged.Parent = Events
+SilentToggle.Name = [[SilentToggle]]
+SilentToggle.Parent = Events
+
+-- End --
+-- Thank you for using --
